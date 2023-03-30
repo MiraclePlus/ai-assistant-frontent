@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { ColumnSample } from "@/app/utils/interfaces";
 import Table from "./Table";
-import Form from "./Form";
 import FloatingMenu from "@/app/components/FloatMenu";
 import { compose, flip, append, tap } from "ramda";
 
@@ -39,7 +38,6 @@ const Page = () => {
       <div className="p-5 bg-white">
         <Table payloads={payloads} evaluate={console.info} />
       </div>
-      <Form show={visible} close={close} create={create} />
       <FloatingMenu handleClick={show} />
     </div>
   );

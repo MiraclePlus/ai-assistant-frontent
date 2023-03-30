@@ -23,7 +23,6 @@ import {
   __,
 } from "ramda";
 import Table from "@/app/components/columns/Table";
-import Form from "@/app/components/columns/Form";
 import { ColumnDetail } from "@/app/utils/interfaces";
 import styles from "./page.module.css";
 import FloatingMenu from "@/app/components/FloatMenu";
@@ -164,13 +163,6 @@ const Columns = () => {
           </div>
         </div>
       </div>
-      <Form
-        table={selectedTable}
-        column={selectedColumn}
-        record={editing}
-        create={create}
-        close={() => setEditing(undefined)}
-      />
       <FloatingMenu handleClick={add} />
     </div>
   );
